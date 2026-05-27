@@ -129,10 +129,11 @@ It showcases skills in:
 - SQL-based analysis
 - Geographic and segment-level analysis
 - Interactive dashboard design
-- Communicating findings honestly, with explicit data caveats<img width="1158" height="653" alt="Screenshot 2026-05-27 at 17 14 24" src="https://github.com/user-attachments/assets/b2fbb200-8b17-45e9-bb51-097ecc07fe2f" />
-<img width="1158" height="653" alt="Screenshot 2026-05-27 at 17 14 24" src="https://github.com/user-attachments/assets/fbef9b72-fc0f-4fd9-93f8-573f7c210275" />
-<img width="1158" height="654" alt="Screenshot 2026-05-27 at 17 14 17" src="https://github.com/user-attachments/assets/910e1ae2-5d4d-493f-a865-caa0960cb0df" />
-<img width="1161" height="655" alt="Screenshot 2026-05-27 at 17 14 09" src="https://github.com/user-attachments/assets/59cd8838-2665-4d5b-8f7d-cfeb6f776d3d" />
-<img width="1158" height="647" alt="Screenshot 2026-05-27 at 17 14 02" src="https://github.com/user-attachments/assets/b447468e-cb64-4be0-9c9c-dedc802b325d" />
-<img width="1154" height="655" alt="Screenshot 2026-05-27 at 17 13 54" src="https://github.com/user-attachments/assets/e8e4ee5f-77f8-4156-833e-05e62be6a183" />
+- Communicating findings honestly, with explicit data caveats
+<img width="1154" height="655" alt="Screenshot 2026-05-27 at 17 13 54" src="https://github.com/user-attachments/assets/f9aafb3e-9445-4d05-8faf-49987e910b71" />
+<img width="1158" height="647" alt="Screenshot 2026-05-27 at 17 14 02" src="https://github.com/user-attachments/assets/d3c85fee-35aa-45e9-b5f0-de1ca262d353" />
+<img width="1161" height="655" alt="Screenshot 2026-05-27 at 17 14 09" src="https://github.com/user-attachments/assets/f18ca285-ae1e-4d01-9d8f-8d219963a6c5" />
+<img width="1158" height="654" alt="Screenshot 2026-05-27 at 17 14 17" src="https://github.com/user-attachments/assets/a3154a87-cf79-493e-bda4-42eb66226464" />
+<img width="1158" height="653" alt="Screenshot 2026-05-27 at 17 14 24" src="https://github.com/user-attachments/assets/b9d3d461-6038-498b-a4c4-ccbcc7646f37" />
+
 
