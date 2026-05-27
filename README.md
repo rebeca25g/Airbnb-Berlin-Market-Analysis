@@ -1,4 +1,3 @@
-<img width="1158" height="653" alt="Screenshot 2026-05-27 at 17 14 24" src="https://github.com/user-attachments/assets/0161b27c-77ff-49b4-9dd6-b8bb5b1d3bd0" />
 # Berlin Airbnb Market Analysis
 
 This project analyzes **14,274 Airbnb listings across Berlin's 12 districts** to understand how price varies geographically, who actually controls the supply, and how the city's short-term-rental regulation shows up in the data.
