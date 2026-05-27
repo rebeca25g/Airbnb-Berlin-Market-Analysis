@@ -1,3 +1,4 @@
+<img width="1158" height="653" alt="Screenshot 2026-05-27 at 17 14 24" src="https://github.com/user-attachments/assets/0161b27c-77ff-49b4-9dd6-b8bb5b1d3bd0" />
 # Berlin Airbnb Market Analysis
 
 This project analyzes **14,274 Airbnb listings across Berlin's 12 districts** to understand how price varies geographically, who actually controls the supply, and how the city's short-term-rental regulation shows up in the data.
@@ -130,3 +131,11 @@ It showcases skills in:
 - Geographic and segment-level analysis
 - Interactive dashboard design
 - Communicating findings honestly, with explicit data caveats
+
+
+
+<img width="1154" height="655" alt="Screenshot 2026-05-27 at 17 13 54" src="https://github.com/user-attachments/assets/369054f2-6723-4686-b3b2-a191af655c6a" />
+<img width="1158" height="647" alt="Screenshot 2026-05-27 at 17 14 02" src="https://github.com/user-attachments/assets/25c39539-82f4-42fb-a6a0-bf1be69d506a" />
+<img width="1161" height="655" alt="Screenshot 2026-05-27 at 17 14 09" src="https://github.com/user-attachments/assets/7fd76dbe-51ac-4f69-8386-b02424cc5174" />
+<img width="1158" height="654" alt="Screenshot 2026-05-27 at 17 14 17" src="https://github.com/user-attachments/assets/f3ec7986-1f9a-47f6-8dc9-f1549823750c" />
+<img width="1158" height="653" alt="Screenshot 2026-05-27 at 17 14 24" src="https://github.com/user-attachments/assets/7bd16b68-a425-49df-98fa-97dfaae51b3a" />
