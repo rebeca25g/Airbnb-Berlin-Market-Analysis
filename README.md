@@ -77,12 +77,6 @@ The Power BI report is a **five-page interactive dashboard** with a sidebar navi
 
 **Reviews** — total review volume, with/without-review split, review activity by year (last-review date), and total reviews by district.
 
-<img width="1158" height="653" alt="Screenshot 2026-05-27 at 17 14 24" src="https://github.com/user-attachments/assets/9228d4ae-7682-480f-90c9-57940059ea9f" />
-<img width="1158" height="654" alt="Screenshot 2026-05-27 at 17 14 17" src="https://github.com/user-attachments/assets/4da8a37f-09d1-4836-a65f-8df056a4f87d" />
-<img width="1161" height="655" alt="Screenshot 2026-05-27 at 17 14 09" src="https://github.com/user-attachments/assets/53c5708c-51ee-4cf0-b635-d3707b9602cf" />
-<img width="1158" height="647" alt="Screenshot 2026-05-27 at 17 14 02" src="https://github.com/user-attachments/assets/e8bf6f40-2a2e-4414-abcc-c2f38aed8bf7" />
-<img width="1154" height="655" alt="Screenshot 2026-05-27 at 17 13 54" src="https://github.com/user-attachments/assets/2b509dd4-8533-4d27-8f21-32a3d4eb0edd" />
-
 
 ## 💡 Key Insights
 
@@ -136,7 +130,8 @@ It showcases skills in:
 - Geographic and segment-level analysis
 - Interactive dashboard design
 - Communicating findings honestly, with explicit data caveats<img width="1158" height="653" alt="Screenshot 2026-05-27 at 17 14 24" src="https://github.com/user-attachments/assets/b2fbb200-8b17-45e9-bb51-097ecc07fe2f" />
-<img width="1158" height="654" alt="Screenshot 2026-05-27 at 17 14 17" src="https://github.com/user-attachments/assets/a6533a0b-7f1a-489e-a159-ea8506dd6419" />
-<img width="1161" height="655" alt="Screenshot 2026-05-27 at 17 14 09" src="https://github.com/user-attachments/assets/0caa9f7c-ab2d-4eff-8c98-6d798f333c74" />
-<img width="1158" height="647" alt="Screenshot 2026-05-27 at 17 14 02" src="https://github.com/user-attachments/assets/4c64eba3-511a-4202-8bea-cdd36edd568d" />
-<img width="1154" height="655" alt="Screenshot 2026-05-27 at 17 13 54" src="https://github.com/user-attachments/assets/d74cb8a3-b3ec-4005-99c8-e3db1198d4da" />
+<img width="1158" height="653" alt="Screenshot 2026-05-27 at 17 14 24" src="https://github.com/user-attachments/assets/9228d4ae-7682-480f-90c9-57940059ea9f" />
+<img width="1158" height="654" alt="Screenshot 2026-05-27 at 17 14 17" src="https://github.com/user-attachments/assets/4da8a37f-09d1-4836-a65f-8df056a4f87d" />
+<img width="1161" height="655" alt="Screenshot 2026-05-27 at 17 14 09" src="https://github.com/user-attachments/assets/53c5708c-51ee-4cf0-b635-d3707b9602cf" />
+<img width="1158" height="647" alt="Screenshot 2026-05-27 at 17 14 02" src="https://github.com/user-attachments/assets/e8bf6f40-2a2e-4414-abcc-c2f38aed8bf7" />
+<img width="1154" height="655" alt="Screenshot 2026-05-27 at 17 13 54" src="https://github.com/user-attachments/assets/2b509dd4-8533-4d27-8f21-32a3d4eb0edd" />
