@@ -1,112 +1,104 @@
-Berlin Airbnb Market Analysis
+# Berlin Airbnb Market Analysis
 
-This project analyzes 14,274 Airbnb listings across Berlin’s 12 districts to understand how pricing, supply concentration, and host behaviour vary across the city — and how Berlin’s short-term-rental regulation appears in the data.
+This project analyzes **14,274 Airbnb listings across Berlin's 12 districts** to understand how price varies geographically, who actually controls the supply, and how the city's short-term-rental regulation shows up in the data.
 
-Using a combination of Python, PostgreSQL, and Power BI, the project turns a raw Airbnb listings snapshot into a structured view of the Berlin short-term-rental market, with a focus on pricing geography, commercial hosting activity, and regulatory patterns.
+The objective is to turn a raw listings snapshot into a clear picture of the Berlin short-term-rental market — useful for anyone looking at pricing strategy, market concentration, or housing/tourism policy.
 
-🎯 Business Problem
+## 🎯 Business Problem
 
-Short-term rentals sit at the intersection of tourism, housing, and regulation. Berlin in particular enforces strict rules on short-term letting, which significantly shapes how the market behaves.
+Short-term rentals sit at the intersection of tourism, housing, and regulation. Berlin in particular enforces strict rules on short-term letting, which shapes how the market behaves. Understanding the supply requires looking past the "individual host renting a spare room" image and asking what the data actually shows.
 
 This project aims to answer:
 
-Where is Airbnb supply concentrated, how does price vary across the city, who controls the listings, and how do regulatory patterns surface in host behaviour?
+**Where is Airbnb supply concentrated, how does price vary across the city, who runs the listings, and how does regulation surface in host behaviour?**
 
-📊 Dataset
+## 📊 Dataset
 
-The dataset is an Inside Airbnb summary snapshot of Berlin listings containing 18 original columns and 14,274 rows.
+The dataset is an Inside Airbnb summary snapshot of Berlin listings (18 original columns, 14,274 rows) covering:
 
-It includes:
+- Listing & host identifiers (listing ID, host ID, host name)
+- Geography (district `neighbourhood_group`, neighbourhood, latitude/longitude)
+- Listing attributes (room type, price, minimum nights, availability over 365 days)
+- Activity (number of reviews, last review date, reviews per month)
+- Host scale (`calculated_host_listings_count`)
+- Registration/licence text
 
-Listing and host identifiers
-Geographic information (neighbourhood_group, neighbourhood, latitude/longitude)
-Listing characteristics (room type, price, minimum nights, availability)
-Review activity and recency
-Host portfolio size (calculated_host_listings_count)
-Registration/licence text
-Price Coverage Caveat
+**A note on price coverage:** about 35% of listings have no listed price. These rows are **kept in the dataset** — they're perfectly valid for counting listings, geography, room type, host, and review analysis — but are **excluded from price-specific metrics**. All price figures in this project are therefore based on the ~9,242 priced listings, while supply and host counts use the full 14,274. This per-metric filtering keeps price averages honest without throwing away a third of the data.
 
-Approximately 35% of listings do not contain a listed price.
+## 🔧 Tools & Technologies
 
-These rows were retained for supply, geography, room-type, and host analysis, but excluded from price-specific calculations. As a result:
+- **Python (Pandas)** → Data cleaning, type fixing, and feature engineering
+- **PostgreSQL** → Data loading and business-question analysis
+- **Power BI** → Five-page interactive dashboard
+- **GitHub** → Project structure and version control
 
-Price metrics use ~9,242 priced listings
-Supply and host metrics use the full 14,274 listings
+## 🧹 Data Cleaning & Preparation
 
-This per-metric filtering preserves analytical accuracy without discarding a large portion of the dataset.
+Key cleaning steps (Python / Pandas):
 
-🔧 Tools & Technologies
-Python (Pandas) — data cleaning and feature engineering
-PostgreSQL — analytical querying
-Power BI — interactive dashboard development
-GitHub — project structure and version control
-🧹 Data Cleaning & Preparation
+- Converted `price` to numeric and `last_review` to a proper date type.
+- **Capped implausible prices:** listings priced above €5,000/night (a small block of clear data errors, e.g. €40,000–€50,000 placeholders) had their price set to blank, keeping the row intact for non-price analysis.
+- **Filled review blanks correctly:** `reviews_per_month` set to 0 only where a listing genuinely has no reviews (a true zero, not a guess); `last_review` left blank where no date exists.
+- Exported with full quoting to avoid delimiter issues from commas inside listing names.
 
-Key cleaning steps included:
+Engineered columns added for analysis:
 
-Converting price to numeric format and last_review to a date type
-Handling implausible price outliers (e.g. €40,000–€50,000 placeholder values) by setting them to blank while preserving the listings for non-price analysis
-Filling reviews_per_month with 0 only where listings genuinely had no reviews
-Leaving missing last_review values blank rather than imputing dates
-Exporting cleaned data with full quoting to prevent delimiter issues
-Engineered Features
+- `price_category` — Budget / Mid-range / Premium / Luxury bands
+- `price_band` — finer price ranges for distribution analysis
+- `host_type` — single-listing vs. multi-listing host
+- `availability_category` — availability bucket over the year
+- `has_reviews` — whether a listing has any reviews
+- `has_license` — whether registration information is shown (see caveat below)
+- `min_nights_band` — minimum-stay buckets (1, 2–3, 4–7, 8–30, 31+ nights)
 
-Additional analytical fields were created, including:
+## 🔍 Analysis Focus
 
-price_category
-price_band
-host_type
-availability_category
-has_reviews
-has_license
-min_nights_band
-💡 Key Insights
-Central Berlin commands the highest prices. Mitte has the highest average nightly price (~€156), while outer districts such as Marzahn-Hellersdorf (~€97) sit at the lower end of the market.
-The market is dominated by entire homes. Entire homes/apartments account for 67.7% of listings, compared with 30.8% private rooms, indicating that Berlin’s Airbnb supply is primarily whole-unit accommodation rather than spare-room hosting.
-Commercial operators hold a meaningful share of supply.
-43.4% of listings belong to multi-listing hosts
-The top 10 hosts control approximately 6.75% of all listings
-The largest operator, Blueground, manages 311 listings
-Professional hosts charge higher prices. Multi-listing hosts average roughly €144/night, compared with €119/night for single-listing hosts.
-Regulatory patterns appear in minimum-stay behaviour. The largest minimum-stay segment is 31+ nights (~5,480 listings), consistent with hosts shifting toward longer-stay models in response to Berlin’s short-term-let restrictions (Zweckentfremdungsverbot).
-Registration visibility is incomplete. Around 65% of listings display registration information, while ~35% do not. “Not shown” does not necessarily imply non-compliance.
-Reviews concentrate in central districts. The dataset contains approximately 635K total reviews, with review activity heavily concentrated in Mitte and Friedrichshain-Kreuzberg.
-The market has a modest core with a thin luxury tail. Median nightly price is €104, with most listings concentrated in the €50–150 range and relatively few above €300/night.
-📈 Dashboard
+- Price geography across districts and neighbourhoods
+- Room type mix and price by room type
+- Host concentration (individuals vs. commercial operators)
+- Registration coverage
+- Review volume, activity, and recency
+- Minimum-stay patterns and their link to regulation
 
-The Power BI report is structured as a five-page interactive dashboard featuring sidebar navigation and cross-filtering functionality.
+## 📈 Dashboard
 
-Overview
-Headline KPIs
-Choropleth map of average price by district
-Supply vs. average price comparison
-Room-type and host-type breakdowns
-Neighborhoods
-District price heatmap
-District comparison table
-Most-listed and highest-priced neighbourhood analysis
-Listings
-Price distribution analysis
-Room-type pricing comparison
-Minimum-night and availability breakdowns
-High-price listing samples
-Hosts
-Single vs. multi-listing host comparison
-Host concentration analysis
-Top 10 hosts table
-Reviews
-Review volume and activity trends
-Listings with vs. without reviews
-Review distribution by district
-📌 Analytical Takeaways
-The 31+ night minimum-stay cluster and partial registration visibility are the strongest indicators of how regulation influences market behaviour.
-Berlin’s Airbnb market includes a substantial commercial layer, meaning the platform cannot be viewed purely as peer-to-peer accommodation.
-Pricing, review activity, and listing density all cluster heavily in central districts.
-Analytical caveats are explicitly maintained throughout the project:
-Price metrics use only priced listings
-Registration status is framed as “shown/not shown”
-Estimated revenue calculations were intentionally excluded because the source data does not contain revenue figures
-📁 Project Structure
+The Power BI report is a **five-page interactive dashboard** with a sidebar navigation menu and cross-filtering (clicking a district or room type filters the whole page):
+
+**Overview** — headline KPIs (total listings, unique hosts, median price, average availability, listings with reviews) plus:
+- A choropleth map of average price by district (built from a custom Berlin districts boundary file)
+- A combo chart of supply vs. average price by district
+- Room-type, price-category, and host-type breakdowns
+
+**Neighborhoods** — district price heatmap, a district breakdown table (listings / average price / average reviews), and neighbourhood-level bars for both the most-listed and priciest neighbourhoods (the latter filtered to areas with enough listings to be reliable).
+
+**Listings** — price distribution histogram, average price by room type, room-type mix, minimum-nights breakdown, availability bands, and a sample of the most expensive listings.
+
+**Hosts** — single vs. multi-listing split, listings-per-host concentration, average price by host type, and a Top 10 hosts table.
+
+**Reviews** — total review volume, with/without-review split, review activity by year (last-review date), and total reviews by district.
+
+
+## 💡 Key Insights
+
+- **The centre commands a premium.** Mitte has both the highest average price (~€156/night) and is among the largest by supply, while outer districts like Marzahn-Hellersdorf (~€97) sit at the bottom. Price clearly concentrates in the central ring.
+- **The market is whole-unit, not spare-room.** Entire homes/apartments make up **67.7%** of listings versus 30.8% private rooms — the supply skews heavily toward full units rather than hosts renting a spare room.
+- **A small number of operators hold a meaningful share.** **43.4%** of listings belong to multi-listing hosts, the top 10 hosts alone control **~6.75%** of all listings, and the single largest operator (Blueground) runs **311** listings. This is a market with a visible commercial layer, not purely individuals.
+- **Commercial hosts charge more.** Multi-listing hosts average ~€144/night versus ~€119 for single-listing hosts — professional operators price above casual ones.
+- **Regulation leaves a fingerprint.** The single largest minimum-stay bucket is **31+ nights (~5,480 listings)** — consistent with hosts structuring stays as longer-term rentals to work around Berlin's short-term-let restrictions (*Zweckentfremdungsverbot*). This is arguably the project's sharpest finding.
+- **Registration coverage is partial.** Roughly 65% of listings show registration information and ~35% show none. Note: "none shown" means *no registration info was displayed* — not proven unlicensed.
+- **Reviews concentrate centrally.** ~635K reviews in total; **77%** of listings have at least one review. Review activity mirrors price geography — Mitte (~160K) and Friedrichshain-Kreuzberg (~152K) dominate.
+- **Typical price is modest, with a thin luxury tail.** Median price is **€104/night**, most listings fall in the €50–150 band, and only a small share sit above €300 — with a handful of genuine high-end spaces (€2,500–€3,800).
+
+## 📌 Analytical Takeaways
+
+- **The 31+ night cluster and the registration gap are the headline regulatory signals** — both are worth monitoring as proxies for how the market is responding to short-term-let rules.
+- **Supply concentration matters for policy and platform alike.** A professionalised minority holds a disproportionate share, so any analysis treating Berlin Airbnb as purely peer-to-peer would be misleading.
+- **Price and demand cluster centrally**, which is relevant for where regulatory attention and pricing competition are highest.
+- **Insights are stated with their caveats** — price metrics use only priced listings, registration is framed as "shown / not shown," and an estimated-revenue view was deliberately *excluded* from the dashboard because the source data contains no revenue figure (any such number would be a model, not a fact).
+
+## 📁 Project Structure
+
+```
 berlin-airbnb-analysis/
 │
 ├── data/
@@ -124,15 +116,17 @@ berlin-airbnb-analysis/
 │   └── airbnb_berlin_dashboard.pbix
 │
 └── assets/
-    └── dashboard screenshots
-📌 Project Goal
+    └── (dashboard screenshots)
+```
 
-This project demonstrates how a raw listings dataset can be cleaned, queried, and visualized into a clear and transparent view of a regulated short-term-rental market.
+## 📌 Project Goal
 
-It showcases:
+This project demonstrates how a raw listings snapshot can be cleaned, queried, and visualized into a clear, honest picture of a regulated short-term-rental market — bridging the gap between raw Airbnb data and market understanding.
 
-Data cleaning and feature engineering
-SQL-based analytical workflows
-Geographic and segment-level analysis
-Interactive dashboard development
-Communicating findings with explicit analytical caveats
+It showcases skills in:
+
+- Data cleaning and feature engineering
+- SQL-based analysis
+- Geographic and segment-level analysis
+- Interactive dashboard design
+- Communicating findings honestly, with explicit data caveats
