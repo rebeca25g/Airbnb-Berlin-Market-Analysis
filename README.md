@@ -130,8 +130,9 @@ It showcases skills in:
 - Geographic and segment-level analysis
 - Interactive dashboard design
 - Communicating findings honestly, with explicit data caveats<img width="1158" height="653" alt="Screenshot 2026-05-27 at 17 14 24" src="https://github.com/user-attachments/assets/b2fbb200-8b17-45e9-bb51-097ecc07fe2f" />
-<img width="1158" height="653" alt="Screenshot 2026-05-27 at 17 14 24" src="https://github.com/user-attachments/assets/9228d4ae-7682-480f-90c9-57940059ea9f" />
-<img width="1158" height="654" alt="Screenshot 2026-05-27 at 17 14 17" src="https://github.com/user-attachments/assets/4da8a37f-09d1-4836-a65f-8df056a4f87d" />
-<img width="1161" height="655" alt="Screenshot 2026-05-27 at 17 14 09" src="https://github.com/user-attachments/assets/53c5708c-51ee-4cf0-b635-d3707b9602cf" />
-<img width="1158" height="647" alt="Screenshot 2026-05-27 at 17 14 02" src="https://github.com/user-attachments/assets/e8bf6f40-2a2e-4414-abcc-c2f38aed8bf7" />
-<img width="1154" height="655" alt="Screenshot 2026-05-27 at 17 13 54" src="https://github.com/user-attachments/assets/2b509dd4-8533-4d27-8f21-32a3d4eb0edd" />
+<img width="1158" height="653" alt="Screenshot 2026-05-27 at 17 14 24" src="https://github.com/user-attachments/assets/fbef9b72-fc0f-4fd9-93f8-573f7c210275" />
+<img width="1158" height="654" alt="Screenshot 2026-05-27 at 17 14 17" src="https://github.com/user-attachments/assets/910e1ae2-5d4d-493f-a865-caa0960cb0df" />
+<img width="1161" height="655" alt="Screenshot 2026-05-27 at 17 14 09" src="https://github.com/user-attachments/assets/59cd8838-2665-4d5b-8f7d-cfeb6f776d3d" />
+<img width="1158" height="647" alt="Screenshot 2026-05-27 at 17 14 02" src="https://github.com/user-attachments/assets/b447468e-cb64-4be0-9c9c-dedc802b325d" />
+<img width="1154" height="655" alt="Screenshot 2026-05-27 at 17 13 54" src="https://github.com/user-attachments/assets/e8e4ee5f-77f8-4156-833e-05e62be6a183" />
+
